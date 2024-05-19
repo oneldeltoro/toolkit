@@ -219,7 +219,7 @@ note: help on the ant commands within particular service subprojects can be foun
     <delete>
       <fileset dir="${ivy.dir}" includes="*.jar"/>
     </delete>
-    <get src="http://repo1.maven.org/maven2/org/apache/ivy/ivy/${ivy.version}/ivy-${ivy.version}.jar"
+    <get src="https://repo1.maven.org/maven2/org/apache/ivy/ivy/${ivy.version}/ivy-${ivy.version}.jar"
       dest="${ivy.jar}" usetimestamp="true" />
   </target>
 
