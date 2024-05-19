@@ -61,3 +61,12 @@ settings/**
 *.launch
 .idea/*
 */bin/*
+MST-instances/MST-instances/MetadataServicesToolkit/*
+*/build/*
+*/ivy-report/*
+mst-service/custom/DCToXCTransformation/build/*
+mst-service/custom/MARCAggregation/build/*
+mst-service/custom/MARCNormalization/build/*
+mst-service/custom/MARCToXCTransformation/build/*
+mst-service/example/build/*
+mst-service/impl/build/*

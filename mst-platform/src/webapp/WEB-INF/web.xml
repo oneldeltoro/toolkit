@@ -87,10 +87,25 @@
     <servlet-name>ping</servlet-name>
     <jsp-file>/solr/admin/ping.jsp</jsp-file>
   </servlet>
+  <!-- Configuración del servlet JSP -->
+  <servlet>
+    <servlet-name>jsp</servlet-name>
+    <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+    <init-param>
+      <param-name>fork</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <init-param>
+      <param-name>xpoweredBy</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <load-on-startup>3</load-on-startup>
+  </servlet>
 
+  <!-- Mapeo del servlet JSP -->
   <servlet-mapping>
     <servlet-name>jsp</servlet-name>
-    <url-pattern>/pages/js/*</url-pattern>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
 
   <servlet-mapping>
@@ -160,5 +175,10 @@
     </user-data-constraint>
   </security-constraint>
    -->
-
+  <jsp-config>
+    <taglib>
+      <taglib-uri>mst-tags</taglib-uri>
+      <taglib-location>/WEB-INF/classes/xc/mst/tags/mst-tags.tld</taglib-location>
+    </taglib>
+  </jsp-config>
 </web-app>

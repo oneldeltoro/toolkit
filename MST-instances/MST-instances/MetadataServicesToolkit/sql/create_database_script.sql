@@ -79,7 +79,7 @@ DROP TABLE IF EXISTS providers;
 CREATE TABLE providers
 (
   provider_id INT(11) NOT NULL AUTO_INCREMENT,
-  created_at DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+  created_at DATETIME NOT NULL DEFAULT '1960-01-01 00:00:00',
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   name VARCHAR(255) NOT NULL,
   oai_provider_url VARCHAR(255) NOT NULL,
@@ -224,8 +224,8 @@ INSERT INTO logs(warnings,
                  log_file_location)
 VALUES (0,
         0,
-        "General MST",
-        "logs/MST_General_log.txt");
+        'General MST',
+        'logs/MST_General_log.txt');
 
 INSERT INTO logs(warnings,
                  errors,
@@ -233,8 +233,8 @@ INSERT INTO logs(warnings,
                  log_file_location)
 VALUES (0,
         0,
-        "Record Count Rules and Results",
-        "logs/MST_rules_log.txt");
+        'Record Count Rules and Results',
+        'logs/MST_rules_log.txt');
 
 INSERT INTO logs(warnings,
                  errors,
@@ -242,8 +242,8 @@ INSERT INTO logs(warnings,
                  log_file_location)
 VALUES (0,
         0,
-        "Timing Information",
-        "logs/MST_timing_log.txt");
+        'Timing Information',
+        'logs/MST_timing_log.txt');
 
 INSERT INTO logs(warnings,
                  errors,
@@ -251,8 +251,8 @@ INSERT INTO logs(warnings,
                  log_file_location)
 VALUES (0,
         0,
-        "Repository Management",
-        "logs/general/repositoryManagement.txt");
+        'Repository Management',
+        'logs/general/repositoryManagement.txt');
 
 INSERT INTO logs(warnings,
                  errors,
@@ -260,8 +260,8 @@ INSERT INTO logs(warnings,
                  log_file_location)
 VALUES (0,
         0,
-        "User Management",
-        "logs/general/userManagement.txt");
+        'User Management',
+        'logs/general/userManagement.txt');
 
 INSERT INTO logs(warnings,
                  errors,
@@ -269,8 +269,8 @@ INSERT INTO logs(warnings,
                  log_file_location)
 VALUES (0,
         0,
-        "Authentication Server Management",
-        "logs/general/authServerManagement.txt");
+        'Authentication Server Management',
+        'logs/general/authServerManagement.txt');
 
 INSERT INTO logs(warnings,
                  errors,
@@ -278,8 +278,8 @@ INSERT INTO logs(warnings,
                  log_file_location)
 VALUES (0,
         0,
-        "MySQL",
-        "logs/general/mysql.txt");
+        'MySQL',
+        'logs/general/mysql.txt');
 
 INSERT INTO logs(warnings,
                  errors,
@@ -287,8 +287,8 @@ INSERT INTO logs(warnings,
                  log_file_location)
 VALUES (0,
         0,
-        "Solr Index",
-        "logs/general/solr.txt");
+        'Solr Index',
+        'logs/general/solr.txt');
 
 INSERT INTO logs(warnings,
                  errors,
@@ -296,8 +296,8 @@ INSERT INTO logs(warnings,
                  log_file_location)
 VALUES (0,
         0,
-        "Jobs Management",
-        "logs/general/jobs.txt");
+        'Jobs Management',
+        'logs/general/jobs.txt');
 
 INSERT INTO logs(warnings,
                  errors,
@@ -305,8 +305,8 @@ INSERT INTO logs(warnings,
                  log_file_location)
 VALUES (0,
         0,
-        "Service Management",
-        "logs/general/serviceManagement.txt");
+        'Service Management',
+        'logs/general/serviceManagement.txt');
 
 INSERT INTO logs(warnings,
                  errors,
@@ -314,8 +314,8 @@ INSERT INTO logs(warnings,
                  log_file_location)
 VALUES (0,
         0,
-        "MST Configuration",
-        "logs/general/configuration.txt");
+        'MST Configuration',
+        'logs/general/configuration.txt');
 
 -- -------------------------------------------------------------
 -- Table structure for sets
@@ -349,9 +349,9 @@ INSERT INTO sets (display_name,
                   is_provider_set,
                   is_record_set,
                   provider_id)
-VALUES ("MARCXML Bibliographic Records",
-        "A set of all MARCXML Bibliographic records in the repository.",
-        "MARCXMLbibliographic",
+VALUES ('MARCXML Bibliographic Records',
+        'A set of all MARCXML Bibliographic records in the repository.',
+        'MARCXMLbibliographic',
         false,
         true,
         0);
@@ -362,9 +362,9 @@ INSERT INTO sets (display_name,
                   is_provider_set,
                   is_record_set,
                   provider_id)
-VALUES ("MARCXML Holdings Records",
-        "A set of all MARCXML holdings records in the repository.",
-        "MARCXMLholdings",
+VALUES ('MARCXML Holdings Records',
+        'A set of all MARCXML holdings records in the repository.',
+        'MARCXMLholdings',
         false,
         true,
         0);
@@ -375,9 +375,9 @@ INSERT INTO sets (display_name,
                   is_provider_set,
                   is_record_set,
                   provider_id)
-VALUES ("MARCXML Authority Records",
-        "A set of all MARCXML Authority records in the repository.",
-        "MARCXMLauthority",
+VALUES ('MARCXML Authority Records',
+        'A set of all MARCXML Authority records in the repository.',
+        'MARCXMLauthority',
         false,
         true,
         0);

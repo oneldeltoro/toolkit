@@ -342,12 +342,23 @@ note: help on the ant commands within particular service subprojects can be foun
     <ant target="mc.deploy" />
     <ant target="mp.deploy" />
     <ant target="ms.copy-example" />
-    <!--
+
+    <ant target="deploy-service">
+      <property name="sname" value="MARCAggregation"/>
+      <property name="sversion" value="1.5.5"/>
+    </ant>
     <ant target="deploy-service">
       <property name="sname" value="MARCNormalization"/>
-      <property name="sversion" value="0.3.0"/>
+      <property name="sversion" value="1.5.5"/>
     </ant>
-    -->
+    <ant target="deploy-service">
+      <property name="sname" value="MARCToXCTransformation"/>
+      <property name="sversion" value="1.5.5"/>
+    </ant>
+    <ant target="deploy-service">
+      <property name="sname" value="DCToXCTransformation"/>
+      <property name="sversion" value="1.5.5"/>
+    </ant>
   </target>
 
   <target name="dist" depends="retrieve, dist.nodep" />

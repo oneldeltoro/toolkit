@@ -43,6 +43,9 @@
                       url="https://repo1.maven.org/maven2/org/testng/testng/5.8/testng-5.8-jdk15.jar"/>
         </dependency>
 
+
+        <!--
+
         <dependency org="org.apache.tomcat" name="jsp-api" rev="6.0.18" transitive="false">
             <artifact name="jsp-api" type="jar"/>
         </dependency>
@@ -50,9 +53,26 @@
         <dependency org="org.apache.tomcat" name="servlet-api" rev="6.0.18" transitive="false">
             <artifact name="servlet-api" type="jar"/>
         </dependency>
-
         <dependency org="jstl" name="jstl" rev="1.1.2" transitive="false">
             <artifact name="jstl" type="jar"/>
+        </dependency>
+
+        <dependency org="taglibs" name="standard" rev="1.1.1">
+            <artifact name="standard" type="jar"/>
+        </dependency>
+         -->
+
+        <dependency org="org.apache.tomcat" name="tomcat-jsp-api" rev="9.0.89" transitive="false">
+            <artifact name="tomcat-jsp-api" type="jar"/>
+        </dependency>
+        <dependency org="org.apache.tomcat" name="tomcat-servlet-api" rev="9.0.89" transitive="false">
+            <artifact name="tomcat-servlet-api" type="jar"/>
+        </dependency>
+        <dependency org="org.apache.taglibs" name="taglibs-standard-impl" rev="1.2.5" transitive="false">
+            <artifact name="taglibs-standard-impl" type="jar"/>
+        </dependency>
+        <dependency org="org.apache.taglibs" name="taglibs-standard-spec" rev="1.2.5" transitive="false">
+            <artifact name="taglibs-standard-spec" type="jar"/>
         </dependency>
 
         <dependency org="org.apache.struts" name="struts2-core" rev="2.2.1" transitive="false">
@@ -95,8 +115,6 @@
         <dependency org="commons-collections" name="commons-collections" rev="3.2.1" transitive="false">
             <artifact name="commons-collections" type="jar"/>
         </dependency>
-        <!--
-        -->
 
         <dependency org="jaxen" name="jaxen" rev="1.1.1" transitive="false">
             <artifact name="jaxen" type="jar"/>
@@ -119,7 +137,6 @@
             <exclude org="log4j"/>
             <exclude org="org.mortbay.jetty"/>
         </dependency>
-
 
         <dependency org="org.apache.solr" name="solr-solrj" rev="3.3.0" transitive="true">
             <artifact name="solr-solrj" type="jar"/>
@@ -157,49 +174,6 @@
             <exclude org="org.mortbay.jetty"/>
         </dependency>
 
-        <!--  <dependency org="org.apache.lucene" name="lucene-core" rev="3.3.0" transitive="true">
-              <artifact name="lucene-core" type="jar"
-                        url="https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/3.3.0/lucene-core-3.3.0.jar"/>
-
-              <exclude org="junit" name="junit"/>
-              <exclude org="org.apache.ant" name="ant"/>
-              <exclude org="org.apache.ant" name="ant-junit"/>
-          </dependency>
-          <dependency org="org.apache.lucene" name="lucene-highlighter" rev="3.3.0" transitive="true">
-              <artifact name="lucene-highlighter" type="jar"
-                        url="https://repo1.maven.org/maven2/org/apache/lucene/lucene-highlighter/3.3.0/lucene-highlighter-3.3.0.jar"/>
-          </dependency>
-
-        <dependency org="org.apache.lucene" name="lucene-spellchecker" rev="3.3.0" transitive="true">
-            <artifact name="lucene-spellchecker" type="jar"
-                      url="https://repo1.maven.org/maven2/org/apache/lucene/lucene-spellchecker/3.3.0/lucene-spellchecker-3.3.0.jar"/>
-        </dependency>
-
-        <dependency org="org.apache.lucene" name="lucene-analyzers" rev="3.3.0" transitive="true">
-             <artifact name="lucene-analyzers" type="jar"
-                       url="https://repo1.maven.org/maven2/org/apache/lucene/lucene-analyzers/3.3.0/lucene-analyzers-3.3.0.jar"/>
-             <exclude org="junit" name="junit"/>
-             <exclude org="org.apache.ant" name="ant"/>
-             <exclude org="org.apache.ant" name="ant-junit"/>
-         </dependency>
-         <dependency org="org.apache.lucene" name="lucene-icu" rev="3.3.0" transitive="true">
-             <artifact name="lucene-icu" type="jar"
-                       url="https://repo1.maven.org/maven2/org/apache/lucene/lucene-icu/3.3.0/lucene-icu-3.3.0.jar"/>
-         </dependency>
-         <dependency org="org.apache.lucene" name="lucene-memory" rev="3.3.0" transitive="true">
-             <artifact name="lucene-memory" type="jar"
-                       url="https://repo1.maven.org/maven2/org/apache/lucene/lucene-memory/3.3.0/lucene-memory-3.3.0.jar"/>
-         </dependency>
-
-       <dependency org="org.apache.lucene" name="lucene-misc" rev="3.3.0" transitive="true">
-           <artifact name="lucene-misc" type="jar"
-                     url="https://repo1.maven.org/maven2/org/apache/lucene/lucene-misc/3.3.0/lucene-misc-3.3.0.jar"/>
-       </dependency>
-      <dependency org="org.apache.lucene" name="lucene-queries" rev="3.3.0" transitive="true">
-          <artifact name="lucene-queries" type="jar"
-                    url="https://repo1.maven.org/maven2/org/apache/lucene/lucene-queries/3.3.0/lucene-queries-3.3.0.jar"/>
-      </dependency>-->
-
       <dependency org="stax-utils" name="stax-utils" rev="snapshot-20040917" transitive="false">
           <artifact name="stax-utils" type="jar"/>
       </dependency>
@@ -215,10 +189,6 @@
       <dependency org="org.slf4j" name="slf4j-log4j12" rev="1.6.1" transitive="true">
           <artifact name="slf4j-log4j12" type="jar"/>
           <exclude org="log4j"/>
-      </dependency>
-
-      <dependency org="taglibs" name="standard" rev="1.1.1">
-          <artifact name="standard" type="jar"/>
       </dependency>
 
       <dependency org="ant-contrib" name="cpptasks" rev="1.0b3">
@@ -304,9 +274,6 @@
             <artifact name="joda-time" type="jar"/>
         </dependency>
 
-        <!--
-        <dependency org="org.hibernate" name="hibernate" rev="3.5.1-Final" transitive="true" />
-        -->
         <dependency org="org.hibernate" name="hibernate-core" rev="3.5.1-Final" transitive="false">
             <artifact name="hibernate-core" type="jar"/>
         </dependency>

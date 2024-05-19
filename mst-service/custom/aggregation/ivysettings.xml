@@ -18,7 +18,7 @@
  <property name="ivy.local.default.ivy.pattern"      value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" override="false"/>
  <property name="ivy.local.default.artifact.pattern" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" override="false"/>
 
- <property name="ivy.ivyrep.default.ivy.root"        value="http://xc-web.carli.illinois.edu/doc/Ivy/" override="false"/>
+ <property name="ivy.ivyrep.default.ivy.root"        value="https://repo1.maven.org/maven2/" override="false"/>
  <property name="ivy.ivyrep.default.ivy.pattern"     value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" override="false"/>
  <property name="ivy.ivyrep.default.artifact.root"   value="${ivy.ivyrep.default.ivy.root}" override="false"/>
  <property name="ivy.ivyrep.default.artifact.pattern" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" override="false"/>
@@ -37,24 +37,15 @@
          <!-- official maven2 repo -->
          <ibiblio name="maven2" m2compatible="true" />
 
-		 <ivyrep name="xcmetadataservicestoolkit" ivyroot="http://xc-web.carli.illinois.edu/doc/Ivy/" />
+		 <ivyrep name="xcmetadataservicestoolkit" ivyroot="https://repo1.maven.org/maven2/" />
 
          <!-- apache incubating maven2 repo -->
          <ibiblio name="apache-incubating" m2compatible="true"
-            root="http://people.apache.org/repo/m2-incubating-repository" />
+                  root="https://repo1.maven.org/maven2" />
          
          <!-- apache build maven2 repo -->
-         <ibiblio name="apache-builds" m2compatible="true"  
-            root="http://people.apache.org/builds/struts/2.1.2/m2-staging-repository"/>
-            
-
-         <!-- jboss maven2 repo, used for jbpm -->
-         <ibiblio name="jboss" m2compatible="true" checksums=""
-            root="http://repository.jboss.org/maven2/" />
-
-         <!-- some jbpm modules seem to be missing from jboss repo, here is one where we can get what we need -->
-         <ibiblio name="elca-services" m2compatible="true"
-            root="http://el4.elca-services.ch/el4j/maven2repository/"/>
+         <ibiblio name="apache-builds" m2compatible="true"
+                  root="https://repo.maven.apache.org/maven2/org/apache/struts/struts2-core/2.2.1/"/>
 
          <!-- java.net repo, containing useful java apis -->
          <ibiblio name="java.net" root="http://download.java.net/maven/1/"

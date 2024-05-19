@@ -59,9 +59,6 @@
          <ibiblio name="elca-services" m2compatible="true"
             root="http://el4.elca-services.ch/el4j/maven2repository/"/>-->
 
-         <!-- java.net repo, containing useful java apis -->
-         <ibiblio name="java.net" root="http://download.java.net/maven/1/"
-             pattern="[organisation]/[type]s/[artifact]-[revision].[ext]"/>
 
      </chain>
 
