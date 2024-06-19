@@ -87,10 +87,44 @@
     <servlet-name>ping</servlet-name>
     <jsp-file>/solr/admin/ping.jsp</jsp-file>
   </servlet>
-
+  <servlet>
+    <servlet-name>jsp</servlet-name>
+    <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+    <init-param>
+      <param-name>fork</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <init-param>
+      <param-name>xpoweredBy</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <load-on-startup>3</load-on-startup>
+    <!-- Nuevos parámetros -->
+    <init-param>
+      <param-name>production</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>checkInterval</param-name>
+      <param-value>86400</param-value>
+    </init-param>
+    <init-param>
+      <param-name>trimSpaces</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <!-- Otros parámetros opcionales -->
+    <!-- <init-param>
+        <param-name>scratchDir</param-name>
+        <param-value>/ruta/a/tu/carpeta/temporal</param-value>
+    </init-param> -->
+    <!-- <init-param>
+        <param-name>mappedFile</param-name>
+        <param-value>false</param-value>
+    </init-param> -->
+  </servlet>
   <servlet-mapping>
     <servlet-name>jsp</servlet-name>
-    <url-pattern>/pages/js/*</url-pattern>
+    <url-pattern>/*</url-pattern>
   </servlet-mapping>
 
   <servlet-mapping>
@@ -161,4 +195,10 @@
   </security-constraint>
    -->
 
+  <jsp-config>
+    <taglib>
+      <taglib-uri>mst-tags</taglib-uri>
+      <taglib-location>/WEB-INF/classes/xc/mst/tags/mst-tags.tld</taglib-location>
+    </taglib>
+  </jsp-config>
 </web-app>

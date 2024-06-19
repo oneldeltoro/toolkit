@@ -644,7 +644,7 @@ public class RepositoryDAO extends BaseDAO {
                     TimingLogger.stop("RECORDS_TABLE.insert.create_infile");
                     TimingLogger.start("RECORDS_TABLE.insert.load_infile");
                     this.jdbcTemplate.execute(
-                            "load data infile '" + dbLoadFileStr + "' REPLACE into table " +
+                            "load data local infile '" + dbLoadFileStr + "' REPLACE into table " +
                                     getTableName(name, RECORDS_TABLE) +
                                     " character set utf8 fields terminated by '\\t' lines terminated by '\\n'"
                             );
