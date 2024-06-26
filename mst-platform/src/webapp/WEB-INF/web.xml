@@ -98,8 +98,8 @@
       <param-name>xpoweredBy</param-name>
       <param-value>false</param-value>
     </init-param>
-    <load-on-startup>3</load-on-startup>
-    <!-- Nuevos parámetros -->
+    <load-on-startup>2</load-on-startup>
+    <!-- Nuevos parámetros
     <init-param>
       <param-name>production</param-name>
       <param-value>true</param-value>
@@ -111,7 +111,7 @@
     <init-param>
       <param-name>trimSpaces</param-name>
       <param-value>true</param-value>
-    </init-param>
+    </init-param>-->
     <!-- Otros parámetros opcionales -->
     <!-- <init-param>
         <param-name>scratchDir</param-name>
@@ -124,7 +124,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>jsp</servlet-name>
-    <url-pattern>/*</url-pattern>
+    <url-pattern>/st/*</url-pattern>
   </servlet-mapping>
 
   <servlet-mapping>

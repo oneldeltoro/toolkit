@@ -681,7 +681,7 @@ public class RepositoryDAO extends BaseDAO {
                     TimingLogger.stop("RECORDS_XML_TABLE.insert.create_infile");
                     TimingLogger.start("RECORDS_XML_TABLE.insert.load_infile");
                     this.jdbcTemplate.execute(
-                            "load data infile '" + dbLoadFileStr + "' REPLACE into table " +
+                            "load data local infile '" + dbLoadFileStr + "' REPLACE into table " +
                                     getTableName(name, RECORDS_XML_TABLE) +
                                     " character set utf8 fields terminated by '\\0\\t' escaped by '' lines terminated by '\\0\\n'"
                             );
@@ -711,7 +711,7 @@ public class RepositoryDAO extends BaseDAO {
                     TimingLogger.stop("RECORDS_SETS_TABLE.insert.create_infile");
                     TimingLogger.start("RECORDS_SETS_TABLE.insert.load_infile");
                     this.jdbcTemplate.execute(
-                            "load data infile '" + dbLoadFileStr + "' REPLACE into table " +
+                            "load data local infile '" + dbLoadFileStr + "' REPLACE into table " +
                                     getTableName(name, RECORDS_SETS_TABLE) +
                                     " character set utf8 fields terminated by '\\t' lines terminated by '\\n'"
                             );
@@ -741,7 +741,7 @@ public class RepositoryDAO extends BaseDAO {
                     TimingLogger.stop("RECORD_PREDECESSORS_TABLE.insert.create_infile");
                     TimingLogger.start("RECORDS_SETS_TABLE.insert.load_infile");
                     this.jdbcTemplate.execute(
-                            "load data infile '" + dbLoadFileStr + "' REPLACE into table " +
+                            "load data local infile '" + dbLoadFileStr + "' REPLACE into table " +
                                     getTableName(name, RECORD_PREDECESSORS_TABLE) +
                                     " character set utf8 fields terminated by '\\t' lines terminated by '\\n'"
                             );
@@ -772,7 +772,7 @@ public class RepositoryDAO extends BaseDAO {
                     TimingLogger.start("RECORDS_OAI_IDS.insert.load_infile");
                     if (atLeastOne) {
                         this.jdbcTemplate.execute(
-                                "load data infile '" + dbLoadFileStr + "' REPLACE into table " +
+                                "load data local infile '" + dbLoadFileStr + "' REPLACE into table " +
                                         getTableName(name, RECORD_OAI_IDS) +
                                         " character set utf8 fields terminated by '\\t' lines terminated by '\\n'"
                                 );
@@ -808,7 +808,7 @@ public class RepositoryDAO extends BaseDAO {
                     TimingLogger.stop("RECORD_UPDATES_TABLE.insert.create_infile");
                     TimingLogger.start("RECORDS_UPDATES_TABLE.insert.load_infile");
                     this.jdbcTemplate.execute(
-                            "load data infile '" + dbLoadFileStr + "' into table " +
+                            "load data local infile '" + dbLoadFileStr + "' into table " +
                                     getTableName(name, RECORD_UPDATES_TABLE) +
                                     " character set utf8 fields terminated by '\\t' lines terminated by '\\n'"
                             );
